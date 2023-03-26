@@ -1,0 +1,70 @@
+<div class="text-color-layout">
+  <h1>Pipes Common</h1>
+  <p>Pipes include in Angular - Usually in the common module</p>
+</div>
+
+<div class="grid">
+  <div class="col-4">
+    <p-card header="Upper Case"
+    [subheader]="nameLower | uppercase">
+      {{ nameLower | uppercase}}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="Lower Case"
+            [subheader]="nameUpper | uppercase">
+      {{ nameUpper | lowercase}}
+    </p-card>
+  </div>
+  <div class="col-4">
+    <p-card header="TitleC ase"
+            [subheader]="lastName | titlecase">
+      {{ lastName | titlecase}}
+    </p-card>
+  </div>
+</div>
+
+<div class="text-color-layout">
+  <h1>Date | Pipe</h1>
+  <p>Pipes for show the dates</p>
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li> Date</li>
+        <li> Date | Date</li>
+        <li> Date | Date: 'short'</li>
+        <li> Date | Date: 'long'</li>
+        <li> Date | Date: 'MMMM'</li>
+        <li> Date | Date: 'MMMM dd, yyyy'</li>
+      </ul>
+      <hr>
+      <ul>
+        <li> date | date: 'long': 'GMT-6': 'es-BO'</li>
+        <li> date | date: 'long': 'GMT-5'</li>
+        <li> date | date: 'long': '': 'fr'</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="col-6">
+    <p-card>
+      <ul>
+        <li> {{date}}</li>
+        <li> {{date | date}}</li>
+        <li> {{date | date: 'short'}}</li>
+        <li> {{date | date: 'long'}}</li>
+        <li> {{date | date: 'MMMM'}}</li>
+        <li> {{date | date: 'MMMM dd, yyyy'}}</li>
+      </ul>
+
+      <hr>
+      <ul>
+        <li> {{date | date: 'long': 'GMT-6': 'es-BO'}}</li>
+        <li> {{date | date: 'long': 'GMT-5'}}</li>
+        <li> {{date | date: 'long': '': 'fr'}}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
